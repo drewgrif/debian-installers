@@ -20,13 +20,13 @@ sudo apt install -y xfce4 xfce4-goodies
 sudo apt install -y firefox-esr 
 
 # Network File Tools/System Events
-sudo apt install -y dialog mtools dosfstool avahi-daemon acpi acpid gvfs-backends
+sudo apt install -y dialog mtools acpi acpid gvfs-backends
 
 sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
 
-# Sound packages
-sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
+# Sound packages (pulseaudio installed prior)
+sudo apt install -y alsa-utils volumeicon-alsa
 
 # Neofetch/HTOP
 sudo apt install -y neofetch htop
@@ -54,6 +54,7 @@ sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberatio
 # Install LightDM GTK Greeter Settings (lightdm,lightdm-gtk-greeter installs with xfce)
 
 sudo apt install -y lightdm-gtk-greeter-settings
+sudo systemctl enable lightdm
 
 sudo apt autoremove
 
