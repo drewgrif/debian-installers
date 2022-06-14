@@ -50,14 +50,10 @@ sudo apt install -y vim
 # Install fonts
 sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus
 
-# Create folders in user directory (eg. Documents,Downloads,etc.)
-xdg-user-dirs-update
 
+# Install LightDM GTK Greeter Settings (lightdm,lightdm-gtk-greeter installs with xfce)
 
-# Install LightDM
-
-sudo apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-sudo systemctl enable lightdm
+sudo apt install -y lightdm-gtk-greeter-settings
 
 sudo apt autoremove
 
