@@ -53,16 +53,12 @@ sudo apt install -y openbox dunst dbus-x11 feh hsetroot i3lock libnotify-bin lxi
 
 # LXDM login manager
 sudo apt install -y lxdm
+sudo systemctl enable lxdm
 
 ########################################################
 # End of script for default config
 #
 
-## These two scripts will install nerdfonts and copy my configuration files into the ~/.config directory
-## Configuration uses 
-
-source ~/i3gaps-debian/nerdfonts.sh
-source ~/i3gaps-debian/copyconf.sh
 
 sudo apt autoremove
 
