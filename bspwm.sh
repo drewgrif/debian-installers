@@ -62,7 +62,7 @@ sudo systemctl enable cups
 
 
 # Packages needed i3-gaps after installation
-sudo apt install -y bspwm dmenu sxhkd numlockx rofi dunst libnotify-bin unzip geany simple-scan
+sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany simple-scan
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
 # sudo apt install -y micro
