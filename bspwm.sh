@@ -20,7 +20,7 @@ sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
 
 # File Manager (eg. pcmanfm,krusader,thunar,nautilus)
-sudo apt install -y nautilus
+sudo apt install -y thunar
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
 sudo apt install -y kitty
