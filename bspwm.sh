@@ -100,8 +100,8 @@ sudo systemctl enable ly
 ## These two scripts will install nerdfonts and copy my configuration files into the ~/.config directory
 ## Configuration uses 
 
-source ~/i3gaps-debian/nerdfonts.sh
-source ~/i3gaps-debian/copyconf.sh
+source ~/debian-installers/nerdfonts.sh
+
 
 sudo apt autoremove
 
