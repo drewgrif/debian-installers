@@ -82,14 +82,10 @@ install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
 # Required packages for ly console manager
 sudo apt install -y libpam0g-dev libxcb-xkb-dev
 
-# Install Ly Console Display Manager
-cd 
-cd Downloads
-git clone --recurse-submodules https://github.com/nullgemm/ly.git
-cd ly/
-make
-sudo make install
-sudo systemctl enable ly
+# Install Lightdm Console Display Manager
+sudo apt install -y lightdm lightdm-gtk-greeter-settings
+sudo systemctl enable lightdm
+
 
 
 
