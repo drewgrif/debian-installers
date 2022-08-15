@@ -4,7 +4,7 @@
 # Install packages after installing base Debian with no GUI
 
 # xorg display server installation
-sudo apt install -y xorg 
+sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
 
 # Build-essential.
 sudo apt install -y build-essential 
