@@ -79,9 +79,6 @@ mkdir -p .config/{bspwm,sxhkd,dunst}
 install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
 install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
-# Required packages for ly console manager
-sudo apt install -y libpam0g-dev libxcb-xkb-dev
-
 # Install Lightdm Console Display Manager
 sudo apt install -y lightdm lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm
