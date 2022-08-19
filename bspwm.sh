@@ -84,8 +84,6 @@ sudo apt install -y lightdm lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm
 
 
-
-
 ########################################################
 # End of script for default config
 #
