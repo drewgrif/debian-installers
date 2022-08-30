@@ -55,14 +55,14 @@ sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
 sudo apt install -y cups
-sudo apt install -y bluez blueman
+sudo apt install -y bluez blueman simple-scan
 
 sudo systemctl enable bluetooth
 sudo systemctl enable cups
 
 
-# Packages needed i3-gaps after installation
-sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany simple-scan
+# Packages needed for bspwm installation
+sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany 
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
 # sudo apt install -y micro
@@ -79,14 +79,9 @@ mkdir -p .config/{bspwm,sxhkd,dunst}
 install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
 install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
-# Required packages for ly console manager
-sudo apt install -y libpam0g-dev libxcb-xkb-dev
-
 # Install Lightdm Console Display Manager
 sudo apt install -y lightdm lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm
-
-
 
 
 ########################################################
