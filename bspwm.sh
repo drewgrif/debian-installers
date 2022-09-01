@@ -64,12 +64,9 @@ sudo systemctl enable cups
 # Packages needed for bspwm installation
 sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany 
 
-# Command line text editor -- nano preinstalled  -- I like micro but vim is great
-# sudo apt install -y micro
-sudo apt install -y vim
-
-# Install fonts
-sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus
+# Command line text editor -- nano preinstalled 
+sudo apt install -y micro
+# sudo apt install -y vim
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
