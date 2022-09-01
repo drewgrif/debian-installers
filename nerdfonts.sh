@@ -12,6 +12,7 @@ fonts=(
 "Mononoki" 
 "RobotoMono" 
 "SourceCodePro" 
+"UbuntuMono"
 )
 
 for font in ${fonts[@]}
