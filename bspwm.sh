@@ -62,7 +62,7 @@ sudo systemctl enable cups
 
 
 # Packages needed for bspwm installation
-sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany 
+sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany scrot
 
 # Command line text editor -- nano preinstalled 
 sudo apt install -y micro

@@ -1,9 +1,6 @@
 super + w
     firefox-esr
 
-super + shift + w
-	weather-get
-
 super + Return
 	kitty
 
@@ -17,20 +14,11 @@ super + shift + Return
 super + p
 	rofi -show calc -modi calc -no-show-match -no-sort
 
-super + t
-	time_date
-
 super + f
-	thunar
-
-super + m
-	kitty -e fish -c cmus
+	pcmanfm
 
 super + e
 	geany
-
-super + s
-	sys-stats
 
 super + shift + s
 	scrot
