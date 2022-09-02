@@ -71,7 +71,7 @@ sudo apt install -y micro
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
-mkdir -p .config/{bspwm,sxhkd,dunst}
+mkdir -p ~/.config/{bspwm,sxhkd,dunst}
 
 install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
 install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
