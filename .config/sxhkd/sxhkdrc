@@ -40,7 +40,7 @@ super + shift + r
 	bspc wm -r
 
 super + shift + q
-	pkill bspwm
+	bspc quit
 
 super + shift + c
 	bspc node -c
