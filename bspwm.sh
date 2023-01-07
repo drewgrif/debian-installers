@@ -54,12 +54,11 @@ sudo apt install -y fonts-firacode fonts-liberation2 fonts-ubuntu papirus-icon-t
 sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
-sudo apt install -y cups
-sudo apt install -y bluez blueman simple-scan
+sudo apt install -y cups system-config-printer simple-scan
+sudo apt install -y bluez blueman
 
-sudo systemctl enable bluetooth
 sudo systemctl enable cups
-
+sudo systemctl enable bluetooth
 
 # Packages needed for bspwm installation
 sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany scrot
