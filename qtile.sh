@@ -7,7 +7,7 @@
 sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput xorg-dev
 
 # INCLUDES make,etc.
-sudo apt install -y build-essential 
+sudo apt install -y python3-pip 
 
 # Microcode for Intel/AMD 
 # sudo apt install -y amd64-microcode
