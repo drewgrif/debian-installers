@@ -72,20 +72,11 @@ sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberat
 xdg-user-dirs-update
 
 # Install Lightdm Console Display Manager
-# sudo apt install -y lightdm lightdm-gtk-greeter-settings slick-greeter
-# sudo systemctl enable lightdm
-# echo 'greeter-session=slick-greeter' >>  sudo tee -a /etc/lightdm/lightdm.conf
-# echo 'greeter-hide-user=false' >>  sudo tee -a /etc/lightdm/lightdm.conf
+sudo apt install -y lightdm lightdm-gtk-greeter-settings slick-greeter
+sudo systemctl enable lightdm
+echo 'greeter-session=slick-greeter' >>  sudo tee -a /etc/lightdm/lightdm.conf
+echo 'greeter-hide-user=false' >>  sudo tee -a /etc/lightdm/lightdm.conf
 
-# Ly Console Manager
-# Needed packages
-sudo apt install -y libpam0g-dev libxcb-xkb-dev
-cd 
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-make
-sudo make install installsystemd
-sudo systemctl enable ly.service
 
 # XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
@@ -97,11 +88,17 @@ cat > ./temp << "EOF"
 Encoding=UTF-8
 Name=Qtile
 Comment=Dynamic window manager
-Exec=qtile start
 Icon=Qtile
 Type=Application
 EOF
 sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
+
+a="Exec=/home/"
+b=${USER}
+c="/.local/bin/qtile start"
+d="${a}${b}${c}"
+
+echo "$d" | sudo tee -a /usr/share/xsessions/qtile.desktop
 
 ## Qtile install dependencies
 sudo apt install -y python-dbus-dev
@@ -114,10 +111,10 @@ cd qtile
 pip3 install .
 
 # add line to qtile path in .bashrc file
-# echo 'export PATH="${HOME}/.local/bin:${PATH}"' >> ~/.bashrc
+echo 'export PATH="${HOME}/.local/bin:${PATH}"' >> ~/.bashrc
 
 # Install Nerd Fonts
-# source ~/debian-installers/nerdfonts.sh
+source ~/debian-installers/nerdfonts.sh
 
 sudo apt autoremove
 
