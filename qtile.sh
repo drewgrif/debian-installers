@@ -19,8 +19,8 @@ sudo apt install -y network-manager-gnome
 # Installation for Appearance management
 sudo apt install -y lxappearance 
 
-# File Manager (eg. pcmanfm,krusader)
-sudo apt install -y thunar
+# File Manager (eg. pcmanfm,krusader,thunar)
+sudo apt install -y pcmanfm
 
 # Network File Tools/System Events
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager 
@@ -43,11 +43,11 @@ sudo apt install -y neofetch htop
 sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
-sudo apt install -y cups
+# sudo apt install -y cups
 sudo apt install -y bluez blueman
 
 sudo systemctl enable bluetooth
-sudo systemctl enable cups
+# sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
 sudo apt install -y firefox-esr 
@@ -87,7 +87,6 @@ make
 sudo make install installsystemd
 sudo systemctl enable ly.service
 
-
 # XSessions and dwm.desktop
 if [[ ! -d /usr/share/xsessions ]]; then
     sudo mkdir /usr/share/xsessions
@@ -98,23 +97,24 @@ cat > ./temp << "EOF"
 Encoding=UTF-8
 Name=Qtile
 Comment=Dynamic window manager
-Exec=/home/drew/.local/bin/qtile start
+Exec=qtile start
 Icon=Qtile
 Type=Application
 EOF
 sudo cp ./temp /usr/share/xsessions/qtile.desktop;rm ./temp
 
-## Qtile install
+## Qtile install dependencies
 sudo apt install -y python-dbus-dev
 pip3 install xcffib
 pip3 install --no-cache-dir cairocffi
 
+## Qtile install from github
 git clone https://github.com/qtile/qtile
 cd qtile
 pip3 install .
 
-echo 'export PATH="${HOME}/.local/bin:${PATH}"' >> ~/.bashrc
-export PATH="~/bin:$PATH"
+# add line to qtile path in .bashrc file
+# echo 'export PATH="${HOME}/.local/bin:${PATH}"' >> ~/.bashrc
 
 # Install Nerd Fonts
 # source ~/debian-installers/nerdfonts.sh
