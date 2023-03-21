@@ -161,7 +161,7 @@ echo
 echo
 echo
 echo
-echo "****  Installing CUPS from Debian Stable   ****"
+echo "****  Installing CUPS from Debian Sid   ****"
 echo
 # Printing and bluetooth (if needed)
 sudo apt install -t unstable cups simple-scan -yy
@@ -182,7 +182,7 @@ echo
 echo
 echo "****  Installing Compression, Gedit and OpenVPN Tools from Debian Sid   ****"
 echo
-# Packages needed dwm after installation
+# Packages needed after installation
 sudo apt install -t unstable file-roller gedit network-manager-openvpn-gnome-yy
 echo
 echo
