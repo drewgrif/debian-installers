@@ -180,10 +180,10 @@ echo
 echo
 echo
 echo
-echo "****  Installing Additional Tools from Debian Sid   ****"
+echo "****  Installing Compression, Gedit and OpenVPN Tools from Debian Sid   ****"
 echo
 # Packages needed dwm after installation
-sudo apt install -t unstable file-roller gedit  -yy
+sudo apt install -t unstable file-roller gedit network-manager-openvpn-gnome-yy
 echo
 echo
 echo
