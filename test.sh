@@ -74,7 +74,7 @@ sudo apt install -y tilix
 echo
 echo "****  Installing Tools from Debian Stable   ****"
 echo
-sudo apt install git mtools dosfstools acpi acpid timeshift -y
+sudo apt install mtools dosfstools acpi acpid timeshift -y
 sudo systemctl enable acpid
 
 echo
