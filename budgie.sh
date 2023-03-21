@@ -17,6 +17,11 @@
 
 # Default packages are for the configuration and corresponding .config folders
 # Install packages after installing base Debian with no GUI
+
+echo
+echo "****************************************************"
+echo "****  RECOMMENDATION TO ONLY USE IF YOU ARE ON  ****"
+echo "****      DEBIAN BULLSEYE MINIMAL INSTALL       ****"
 echo
 echo "This script is intended for Debian Bullseye Mininal Install"
 read -p "Do you want to proceed? (yes/no) " yn
@@ -30,20 +35,14 @@ case $yn in
 esac
 echo
 echo
-echo
-echo
-echo
-echo "****  Adding unstable/sid to apt list   ****"
-echo
-echo
+echo "***************************************************"
+echo "****  Adding Debian unstable/sid to apt list   ****"
 echo
 echo
 sudo echo 'deb http://deb.debian.org/debian/ unstable main non-free contrib' | sudo tee -a /etc/apt/sources.list
 echo
-echo
+echo "********************************************"
 echo "****   Adding Preferences to Apt List   ****"
-echo
-echo
 echo
 echo
 cat > ./temp << "EOF"
@@ -61,39 +60,33 @@ Pin-Priority: 100
 EOF
 sudo cp ./temp /etc/apt/preferences;rm ./temp
 
-echo
+echo "*********************************************"
 echo "****  Add Latest Kernel from Debian Sid  ****"
 echo
 sudo apt update -yy && sudo apt upgrade -yy
 echo
 echo
-echo
-echo
+echo "******************************************"
 echo "****  Remove Debian Bullseye Kernel   ****"
 echo
 sudo apt autoremove -yy
 echo
 echo
-echo
-echo
+echo "*******************************************************"
 echo "****  Installing Xorg packages from Debian Stable  ****"
 echo
 # xorg display server installation
 sudo apt install -yy xorg xbacklight xbindkeys xvkbd xinput xorg-dev
 echo
 echo
-echo
-echo
-echo
+echo "*********************************************************"
 echo "****  Installing Build Essential from Debian Stable  ****"
 echo
 # INCLUDES make,etc.
 sudo apt install -yy build-essential 
 echo
 echo
-echo
-echo
-echo
+echo "***************************************************"
 echo "****  Installing Microcode from Debian Stable  ****"
 echo
 # Microcode for Intel/AMD 
@@ -101,36 +94,28 @@ echo
 sudo apt install -yy intel-microcode 
 echo
 echo
-echo
-echo
-echo
+echo "**********************************************"
 echo "****  Installing Thunar from Debian Sid   ****"
 echo
 # you may want to sub nemo but takes a lot more packages
 sudo apt install -t unstable thunar -yy
 echo
 echo
-echo
-echo
-echo
+echo "*********************************************************"
 echo "****  Installing Tilix terminal from Debian Stable   ****"
 echo
 # Terminal (eg. terminator,kitty,xfce4-terminal)
 sudo apt install -yy tilix
 echo
 echo
-echo
-echo
-echo
+echo "************************************************"
 echo "****  Installing Tools from Debian Stable   ****"
 echo
 sudo apt install mtools dosfstools acpi acpid timeshift -yy
 sudo systemctl enable acpid
 echo
 echo
-echo
-echo
-echo
+echo "*****************************************************"
 echo "****  Installing GVFS-Backends from Debian Sid   ****"
 echo
 sudo apt install -t unstable avahi-daemon gvfs-backends -yy
@@ -138,18 +123,14 @@ sudo systemctl enable avahi-daemon
 sudo apt autoremove -yy
 echo
 echo
-echo
-echo
-echo
+echo "********************************************************"
 echo "****  Installing Neofetch/Htop from Debian Stable   ****"
 echo
 # Neofetch/HTOP
 sudo apt install -yy neofetch htop
 echo
 echo
-echo
-echo
-echo
+echo "**********************************************"
 echo "****  Installing Exa from Debian Stable   ****"
 echo
 # EXA installation
@@ -158,9 +139,7 @@ echo
 sudo apt install -yy exa
 echo
 echo
-echo
-echo
-echo
+echo "********************************************"
 echo "****  Installing CUPS from Debian Sid   ****"
 echo
 # Printing and bluetooth (if needed)
@@ -168,42 +147,29 @@ sudo apt install -t unstable cups simple-scan -yy
 sudo systemctl enable cups
 echo
 echo
-echo
-echo
-echo
+echo "***********************************************"
 echo "****  Installing Firefox from Debian Sid   ****"
 echo
 # Browser Installation (eg. chromium)
 sudo apt install -t unstable firefox-esr -yy
 echo
-echo
-echo
-echo
-echo
+echo "****************************************************************************"
 echo "****  Installing Compression, Gedit and OpenVPN Tools from Debian Sid   ****"
 echo
 # Packages needed after installation
 sudo apt install -t unstable file-roller gedit network-manager-openvpn-gnome-yy
 echo
 echo
-echo
-echo
-echo
+echo "************************************************"
 echo "****  Installing Fonts from Debian Stable   ****"
 echo
 # Install fonts
 sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus  -yy
 echo
-echo
-echo
-echo
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
-echo
+echo "******************************************************"
 echo "****  Installing Ly Console Manager from Github   ****"
-echo
-echo
-echo
 echo
 echo
 # Install Lightdm Console Display Manager
@@ -222,9 +188,7 @@ sudo make install installsystemd
 sudo systemctl enable ly.service
 echo
 echo
-echo
-echo
-echo
+echo "******************************************************"
 echo "****  Installing Budgie Desktop from Debian Sid   ****"
 echo
 sudo apt install -t unstable budgie-desktop -yy
@@ -232,35 +196,20 @@ sudo apt install -t unstable budgie-indicator-applet -yy
 sudo apt install -t unstable gnome-control-center -yy
 echo
 echo
-echo
-echo
-echo
 echo "****  Installing Sample Themes and Icons from Debian Sid   ****"
 echo
 sudo apt install -t unstable numix-icon-theme numix-gtk-theme materia-gtk-theme papirus-icon-theme dmz-cursor-theme -yy
 echo
-echo
-echo
-echo
-echo
 echo "****  Installing Nerdfonts from Github   ****"
 echo
 # Install Nerd Fonts
-source ~/budgie-debian/nerdfonts.sh
+source ~/debian-installers/nerdfonts.sh
 echo
-echo
-echo
-echo
-echo "****  Autoremove command   ****"
+echo "********************************"
+echo "****   Autoremove command   ****"
 sudo apt autoremove -yy
 echo
-echo
-echo
-echo
-echo
-echo
-echo
-echo
+
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
 
 
