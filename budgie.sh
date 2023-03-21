@@ -169,23 +169,13 @@ echo
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 echo "******************************************************"
-echo "****  Installing Ly Console Manager from Github   ****"
+echo "****  Installing Lightdm Console Manager from Github   ****"
 echo
 echo
 # Install Lightdm Console Display Manager
-# sudo apt install -y lightdm lightdm-gtk-greeter-settings slick-greeter
-# sudo systemctl enable lightdm
+sudo apt install -y lightdm lightdm-gtk-greeter-settings slick-greeter
+sudo systemctl enable lightdm
 
-
-# Ly Console Manager
-# Needed packages
-sudo apt install -y libpam0g-dev libxcb-xkb-dev
-cd 
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-make
-sudo make install installsystemd
-sudo systemctl enable ly.service
 echo
 echo
 echo "******************************************************"
