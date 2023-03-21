@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 # Default packages are for the configuration and corresponding .config folders
 # Install packages after installing base Debian with no GUI
