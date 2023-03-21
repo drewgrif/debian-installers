@@ -15,7 +15,7 @@ esac
 
 echo "****  Adding unstable/sid to apt list   ****"
 echo
-echo 'deb http://deb.debian.org/debian/ unstable main non-free contrib' | tee -a /etc/apt/sources.list
+echo sudo 'deb http://deb.debian.org/debian/ unstable main non-free contrib' | sudo tee -a /etc/apt/sources.list
 echo
 echo
 echo "****   Adding Preferences to Apt List   ****"
@@ -38,7 +38,7 @@ sudo cp ./temp /etc/apt/preferences;rm ./temp
 echo
 echo "****  Add Latest Kernel from Debian Sid  ****"
 echo
-sudo apt update && sudo apt upgrade 
+sudo apt update -yy && sudo apt upgrade -yy
 echo
 echo "****  Remove Debian Bullseye Kernel   ****"
 sudo apt autoremove -y
@@ -121,7 +121,7 @@ echo
 echo "****  Installing Fonts from Debian Stable   ****"
 echo
 # Install fonts
-sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus 
+sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus  -y
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
@@ -147,14 +147,14 @@ sudo systemctl enable ly.service
 echo
 echo "****  Installing Budgie Desktop from Debian Sid   ****"
 echo
-sudo apt install -t unstable budgie-desktop
-sudo apt install -t unstable budgie-indicator-applet
-sudo apt install -t unstable gnome-control-center
+sudo apt install -t unstable budgie-desktop -y
+sudo apt install -t unstable budgie-indicator-applet -y
+sudo apt install -t unstable gnome-control-center -y
 
 echo
-echo "****  Installing Fonts from Debian Stable   ****"
+echo "****  Installing Sample Themes and Icons from Debian Sid   ****"
 echo
-sudo apt install -t unstable numix-icon-theme numix-gtk-theme materia-gtk-theme papirus-icon-theme
+sudo apt install -t unstable numix-icon-theme numix-gtk-theme materia-gtk-theme papirus-icon-theme -y
 
 echo
 echo "****  Installing Nerdfonts from Github   ****"
@@ -162,7 +162,7 @@ echo
 # Install Nerd Fonts
 source ~/budgie-debian/nerdfonts.sh
 
-sudo apt autoremove
+sudo apt autoremove -y
 
 printf "\e[1;32mDone! you can now reboot.\e[0m\n"
 
