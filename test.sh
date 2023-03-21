@@ -164,7 +164,7 @@ echo
 echo "****  Installing CUPS from Debian Stable   ****"
 echo
 # Printing and bluetooth (if needed)
-sudo apt install -yy cups simple-scan
+sudo apt install -t unstable cups simple-scan -yy
 sudo systemctl enable cups
 echo
 echo
@@ -183,7 +183,7 @@ echo
 echo "****  Installing Additional Tools from Debian Sid   ****"
 echo
 # Packages needed dwm after installation
-sudo apt install -t unstable numlockx file-roller policykit-1-gnome scrot gedit micro -yy
+sudo apt install -t unstable file-roller gedit  -yy
 echo
 echo
 echo
@@ -237,7 +237,7 @@ echo
 echo
 echo "****  Installing Sample Themes and Icons from Debian Sid   ****"
 echo
-sudo apt install -t unstable numix-icon-theme numix-gtk-theme materia-gtk-theme papirus-icon-theme -yy
+sudo apt install -t unstable numix-icon-theme numix-gtk-theme materia-gtk-theme papirus-icon-theme dmz-cursor-theme -yy
 echo
 echo
 echo
