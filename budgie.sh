@@ -157,7 +157,7 @@ echo "**************************************************************************
 echo "****  Installing Compression, Gedit and OpenVPN Tools from Debian Sid   ****"
 echo
 # Packages needed after installation
-sudo apt install -t unstable file-roller gedit network-manager-openvpn-gnome-yy
+sudo apt install -t unstable unzip file-roller gedit network-manager-openvpn-gnome-yy
 echo
 echo
 echo "************************************************"
