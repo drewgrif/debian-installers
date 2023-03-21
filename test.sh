@@ -38,7 +38,7 @@ echo
 echo
 echo
 echo
-echo sudo 'deb http://deb.debian.org/debian/ unstable main non-free contrib' | sudo tee -a /etc/apt/sources.list
+sudo echo 'deb http://deb.debian.org/debian/ unstable main non-free contrib' | sudo tee -a /etc/apt/sources.list
 echo
 echo
 echo "****   Adding Preferences to Apt List   ****"
