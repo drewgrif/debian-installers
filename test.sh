@@ -29,6 +29,10 @@ case $yn in
 		exit 1;;
 esac
 echo
+echo
+echo
+echo
+echo
 echo "****  Adding unstable/sid to apt list   ****"
 echo
 echo
