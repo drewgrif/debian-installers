@@ -23,7 +23,7 @@ echo "****************************************************"
 echo "****  RECOMMENDATION TO ONLY USE IF YOU ARE ON  ****"
 echo "****      DEBIAN BULLSEYE MINIMAL INSTALL       ****"
 echo
-echo "This script is intended for Debian Bullseye Mininal Install"
+echo "This script is intended for Debian Bullseye Minimal Install"
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
