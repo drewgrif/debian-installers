@@ -169,7 +169,7 @@ echo
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 echo "******************************************************"
-echo "****  Installing Lightdm Console Manager from Github   ****"
+echo "****  Installing Lightdm Console Manager from Debian Stable   ****"
 echo
 echo
 # Install Lightdm Console Display Manager
