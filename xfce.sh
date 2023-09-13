@@ -10,11 +10,12 @@ sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
 sudo apt install -y build-essential 
 
 # Microcode for Intel/AMD 
-# sudo apt install -y amd64-microcode
-sudo apt install -y intel-microcode 
+ sudo apt install -y amd64-microcode
+#sudo apt install -y intel-microcode 
 
 #XFCE packages
-sudo apt install -y xfce4 xfce4-goodies
+sudo apt install -y 
+#xfce4 xfce4-goodies -y
 
 # Browser Installation (eg. chromium)
 sudo apt install -y firefox-esr 
@@ -37,15 +38,15 @@ sudo apt install -y neofetch htop
 sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
-sudo apt install -y cups
-sudo apt install -y bluez blueman
+#sudo apt install -y cups
+#sudo apt install -y bluez blueman
 
-sudo systemctl enable bluetooth
-sudo systemctl enable cups
+#sudo systemctl enable bluetooth
+#sudo systemctl enable cups
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
-# sudo apt install -y micro
-sudo apt install -y vim
+ sudo apt install -y micro
+#sudo apt install -y vim
 
 # Install fonts
 sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus
